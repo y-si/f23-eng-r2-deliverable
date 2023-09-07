@@ -120,7 +120,7 @@ git clone git@github.com:hcs-t4sg/f23-deliverable.git
    SECRET_SUPABASE_CONNECTION_STRING="postgresql://postgres:YourDatabasePasswordHere@db.abcdefghijklmnopqrst.supabase.co:5432/postgres"
    ```
 
-   You should not share these keys publically, especially the `SECRET_SUPABASE_CONNECTION_STRING`.
+   You should not share these keys publicly, especially the `SECRET_SUPABASE_CONNECTION_STRING`.
 
 #### Supabase Database Setup
 
