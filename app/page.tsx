@@ -10,7 +10,7 @@ export default function Home() {
       <TypographyP>
         Biodiversity Hub is a web-app that allows users to post information about different species and stay educated on
         biodiversity across the globe. Users sign into the app and add cards that contain data on the species&apos;
-        name, geographic location, population, and more.
+        name, description, population, and more.
       </TypographyP>
       <TypographyP>To see the species page, log in in the top right!</TypographyP>
       <Separator className="my-4" />
