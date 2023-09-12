@@ -55,7 +55,7 @@ You should first update your `npm` and `node` packages to the latest version by 
 `cd` into a desired destination folder, then clone the repo (preferably using SSH):
 
 ```shell
-git clone git@github.com:hcs-t4sg/f23-deliverable.git
+git clone git@github.com:hcs-t4sg/f23-eng-r2-deliverable.git
 ```
 
 #### Package installation
@@ -64,7 +64,7 @@ git clone git@github.com:hcs-t4sg/f23-deliverable.git
 
    ```bash
    # Navigate into the project directory
-   cd f23-deliverable
+   cd f23-eng-r2-deliverable
 
    # Open in VSCode
    code .
@@ -78,9 +78,9 @@ git clone git@github.com:hcs-t4sg/f23-deliverable.git
 3. Run: `npm install` (`npm i` for short)
 
    - If you get something like "command not found", you might not have `npm` installed.
-   - Make sure you're running `npm install` inside the project directory. That is, your terminal should indicate you're inside the `f23-deliverable` directory. If you're using MacOS (with a `zsh` terminal), this probably looks something like:
+   - Make sure you're running `npm install` inside the project directory. That is, your terminal should indicate you're inside the `f23-eng-r2-deliverable` directory. If you're using MacOS (with a `zsh` terminal), this probably looks something like:
      ```bash
-     username@some-address f23-deliverable % npm install
+     username@some-address f23-eng-r2-deliverable % npm install
      ```
 
 - If successful you should see something like:
