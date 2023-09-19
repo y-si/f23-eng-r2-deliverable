@@ -137,7 +137,7 @@ export default function EditSpeciesDialog({userId, species} : {userId: string, s
                     <FormItem>
                       <FormLabel>Scientific Name</FormLabel>
                       <FormControl>
-                        <Input value={value ?? ""} value={species.scientific_name} {...rest} />
+                        <Input value={species.scientific_name} {...rest} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -156,7 +156,7 @@ export default function EditSpeciesDialog({userId, species} : {userId: string, s
                     <FormItem>
                       <FormLabel>Common Name</FormLabel>
                       <FormControl>
-                        <Input value={value ?? ""} value={species.common_name} {...rest} />
+                        <Input value={species.common_name} {...rest} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -223,7 +223,6 @@ export default function EditSpeciesDialog({userId, species} : {userId: string, s
                       <FormLabel>Image URL</FormLabel>
                       <FormControl>
                         <Textarea
-                          value={value ?? ""}
                           value={species.image}
                           {...rest}
                         />
@@ -246,7 +245,6 @@ export default function EditSpeciesDialog({userId, species} : {userId: string, s
                       <FormLabel>Description</FormLabel>
                       <FormControl>
                         <Textarea
-                          value={value ?? ""}
                           value={species.description}
                           {...rest}
                         />
