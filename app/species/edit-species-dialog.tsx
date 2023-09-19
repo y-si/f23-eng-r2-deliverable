@@ -60,6 +60,7 @@ const defaultValues: Partial<FormData> = {
 };
 
 export default function EditSpeciesDialog({userId, species} : {userId: string, species: Species}) {
+  //It should be like {userID, species} : {userId: string, species: species}
 
   const router = useRouter();
   const [open, setOpen] = useState<boolean>(false);
@@ -76,7 +77,7 @@ export default function EditSpeciesDialog({userId, species} : {userId: string, s
 
     if (userId = species.author){
       const supabase = createClientComponentClient<Database>();
-      const { error } = await supabase.from("species").eq("id", species.id)([
+      const { error } = await supabase.from("species").insert([
         {
           author: userId,
           common_name: input.common_name,
@@ -92,7 +93,7 @@ export default function EditSpeciesDialog({userId, species} : {userId: string, s
     // if (error) {
     else {
       return toast({
-        title: "You must be the creator of this species",
+        title: "You must be the creator of the species",
         description: error.message,
         variant: "destructive",
       });
