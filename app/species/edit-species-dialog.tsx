@@ -78,6 +78,7 @@ export default function EditSpeciesDialog({userId, species} : {userId: string, s
     if (userId = species.author){
       const supabase = createClientComponentClient<Database>();
       const { error } = await supabase.from("species").insert([
+      //      const { error } = await supabase.from("species").eq("id", species.id)([
         {
           author: userId,
           common_name: input.common_name,
@@ -88,16 +89,16 @@ export default function EditSpeciesDialog({userId, species} : {userId: string, s
           image: input.image,
         },
       ]);
+
+      if (error) {
+        return toast({
+          title: "Something went wrong.",
+          description: error.message,
+          variant: "destructive",
+        });
+      }
     }
 
-    // if (error) {
-    else {
-      return toast({
-        title: "You must be the creator of the species",
-        description: error.message,
-        variant: "destructive",
-      });
-    }
 
     // Reset form values to the data values that have been processed by zod.
     // This way the user sees any changes that have occurred during transformation
